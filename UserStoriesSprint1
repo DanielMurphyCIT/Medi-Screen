@@ -1,0 +1,18 @@
+Patient
+
+As a Patient, I want to register for an account so that I will be able to view my medical information
+As a Patient, I want to be able to log in to my account, so that I can view my medical results
+As a Patient, I want to be able to pay my insurance premium through the app so that I don’t have to give my information over the phone
+As a Patient, I want to be able to call my GP so that I can speak with him about my results
+As a Patient, I want to be able to call my insurance company so that I can set up health insurance
+As a Patient, I want to leave a review of the app so that other patients/future patients can get an idea of what the app is like 
+
+Doctors
+
+As a Doctor, I want to register via social media so that it makes signing up easier
+As a Doctor, I want to view my patients’ results so that I can provide them support with their diagnosis
+
+
+Insurance Company
+As an Insurer, I want to register with the website so that I can provide patients with insurance 
+As an Insurer, I want to view a patient’s risk of getting cancer, diabetes and/or heart disease so that I can determine the price of their insurance
