@@ -1,0 +1,34 @@
+use mediscreen;
+CREATE TABLE Doctor(
+fName CHAR(10),
+lName char(10),
+Email varchar(20) ,
+Phone int(12),
+DoctorID varchar(10),
+Primary key(DoctorID));
+
+CREATE TABLE Patient (
+PatientID varchar(10),
+ClassGroup VARCHAR(10),
+FName CHAR(12),
+Age INT(3),
+Email VARCHAR(20),
+DoctorID  VARCHAR(10),
+primary key(PatientID),
+FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)
+) ;
+CREATE TABLE PatientLogin (
+PatientID varchar(10),
+Password VARCHAR(10),
+FOREIGN KEY (PatientID) REFERENCES Patient(PatientID)
+) ;
+CREATE TABLE PatientInsurance (
+PatientID varchar(10),
+CompanyName VARCHAR(25),
+PremiumPaid boolean,
+FOREIGN KEY (PatientID) REFERENCES Patient(PatientID)
+) ;
+
+
+
+
