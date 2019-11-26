@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+/*CSS FOR ALL PAGES */
+#main-ul{
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 2px solid black;
+	background-color: white;
+	width: 101%;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.main-li{
+	float: left;
+}
+
+.main-li, .main-a, .account-li, .account-a{
+	display: block;
+	text-decoration: none; 
+	text-align: center;
+	color: black;
+	padding: 14px 16px;
+}
+
+#logo{
+	display: block;
+	text-align: center;
+	position: absolute;
+	top: 14px;
+	left: 45%;
+	font-family: 'ZCOOL KuaiLe', cursive;
+	font-weight: bold;
+}
+#logo-a{
+	display: block;
+	text-decoration: none; 
+	text-align: center;
+	color: black;
+	padding: 14px 16px;
+}
+.main-a:hover{
+	background-color: #66d9ff;
+	color: white;
+	border-radius: 5px;
+}
+.account-a:hover{
+	background-color: #ff5c33;
+	color: white;
+	border-radius: 5px;
+}
+
+body{
+	background-image: url("images/medical_background.jpg");
+	position: absolute;
+	width: 100%;
+	left: -20px;
+	height: 100%;
+}
+
+#register-patient-button{
+	position: absolute;
+	left: 43%;
+	top: 150px;
+	width: 200px;
+	height: 70px;
+	background-color: #fff;		
+	border-radius: 12px;
+	padding-top: 40px;
+	border: 2px solid black;
+	transition: all 0.5s ease-in-out;
+	text-decoration: none;
+	color: black;
+	padding-left: 4%;
+	font-size: 1.8em;
+	font-family: 'Odibee Sans', cursive;
+}
+
+#register-patient-button:hover{
+	transform: scale(1.1);
+}
+
+#home-body-wrapper{
+	background-color: #fff;
+	position: absolute;
+	top: 360px;
+	height: 88%;
+	left: 30px;
+	width: 97%;
+	padding-left:15px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+.main-body{
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+
+#main-body-wrapper{
+	background-color: #e6e6e6;
+	position: absolute;
+	top: 100px;
+	height: 100%;
+	left: 30px;
+	width: 97%;
+	padding-left:15px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+	/*doctorRecords.html CSS */
+#patientRecordForm{
+	text-align: center;
+	padding-top: 20px;
+}
+
+#Patient-Record-Button {
+	box-shadow:inset 0px 0px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:19px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 18px;
+	text-decoration:none;
+	text-shadow:-1px 1px 6px #5b6178;
+}
+#Patient-Record-Button:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+#Patient-Record-Button:active {
+	position:relative;
+	top:1px;
+}
+
+.Patient-Record-Input{
+	padding: 11px 18px;
+	border-radius: 5px;
+}
+
+.form-title{
+	padding-bottom: 10px;
+	font-size: 2em;
+	font-family: 'Bree Serif', serif;	
+}
+
+#Patient-Record-Display{
+	position: absolute;
+	padding-top: 50px;
+	background-color: #fff;
+	left: 450px;
+	top: 250px;
+	width: 40%;
+	height: 60%;
+	box-shadow:	 0px 6px 6px 2px black;
+
+}
+
+.display-labels{
+	padding-left: 50px;
+}
