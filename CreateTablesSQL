@@ -9,8 +9,8 @@ Primary key(DoctorID));
 
 CREATE TABLE Patient (
 PatientID varchar(10),
-ClassGroup VARCHAR(10),
-FName CHAR(12),
+FName VARCHAR(10),
+LName CHAR(12),
 Age INT(3),
 Email VARCHAR(20),
 DoctorID  VARCHAR(10),
@@ -28,3 +28,51 @@ CompanyName VARCHAR(25),
 PremiumPaid boolean,
 FOREIGN KEY (PatientID) REFERENCES Patient(PatientID)
 ) ;
+
+Create Table PatientDiabetes (
+PatientID varchar(10),
+Pregnancies  varchar(10),
+GlucosePlasma varchar(10),
+BloodPressure varchar(10),
+SkinThickness varchar(10),
+Insulin varchar(10),
+BMI varchar(10), 
+DiabetesPedigree varchar(10), 
+OutcomeClass varchar(10),
+foreign key (PatientID) references Patient(PatientID)
+);
+
+Create Table PatientBreastCancer (
+PatientID varchar(10),
+BMI varchar(10),
+Glucose varchar(10),
+Insulin varchar(10),
+HOMA varchar(10),
+Lepti varchar(10),
+Adiponectin varchar(10),
+Resistin varchar(10),
+MCP varchar(10),
+Classification varchar(10),
+foreign key (PatientID) references Patient(PatientID)
+);
+
+Create Table PatientHeartDisease (
+PatientID varchar(10),
+Sex varchar(10),
+ChestPain varchar(10),
+RestingBloodPressure  varchar(10),
+SerumCholestoral varchar(10),
+FastingBloodSugar varchar(10),
+RestingElectrocradiographic varchar(10),
+MaxHeartRate varchar(10),
+ExerciseInducedAngina varchar(10),
+STDepression varchar(10),
+SlopeSTSegment varchar(10),
+MajorVessels varchar(10),
+Thal varchar(10),
+AngiographicDiseaseStatus varchar(10),
+foreign key (PatientID) references Patient(PatientID)
+);
+
+
+
