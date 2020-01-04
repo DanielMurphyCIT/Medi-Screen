@@ -1,0 +1,97 @@
+create table doctors(doctorID int not null AUTO_INCREMENT,
+fName varchar(255),
+lName varchar(255),
+email varchar(255),
+phoneNum varchar(255),
+location varchar(255),
+postCode varchar(255),
+Primary key(doctorID));
+
+create table insurers(insurerID int not null AUTO_INCREMENT,
+fName varchar(255),
+lName varchar(255),
+email varchar(255),
+companyName varchar(255),
+postCode varchar(255),
+Primary key(insurerID));
+
+create table patients(
+patientID int not null auto_increment,
+fName varchar(255),
+lName varchar(255),
+email varchar(255),
+doctorID int,
+insurerID int,
+primary key(patientID),
+FOREIGN KEY (insurerID) REFERENCES insurers(insurerID),
+FOREIGN KEY (doctorID) REFERENCES doctors(doctorID));
+
+create table passwords(
+id int not null auto_increment,
+accountID int,
+password varchar(255),
+primary key(id));
+
+create table medicalHistory(
+id int not null auto_increment,
+patientID int,
+age int,
+bmi varchar(255),
+glucose varchar(255),
+insulin varchar(255),
+sex varchar(255),
+HOMA varchar(255),
+lepti varchar(255),
+adiponectin varchar(255),
+resistin varchar(255),
+MCP varchar(255),
+pregnancies int,
+glucosePlasma varchar(255),
+bloodPressure varchar(255),
+skinFoldThickness varchar(255),
+diabetesPedigreeFunction varchar(255),
+chestPainType int,
+serumCholestoal varchar(255),
+fastingBloodSugar int,
+electrocardiogrpahicResults int,
+maxHeartRate varchar(255),
+exerciseInducedAngina int,
+stDepressionInducedByExcercise varchar(255),
+exerciseSlope int,
+majorVesselAmount int,
+thal int,
+beenCalculated int not null,
+primary key(id),
+FOREIGN KEY (patientID) REFERENCES patients(patientID));
+
+
+create table predictions(
+id int not null auto_increment,
+patientID int,
+medicalHistoryID int,
+heartDisease varchar(255),
+diabetes varchar(255),
+breastCancer varchar(255),
+FOREIGN KEY (patientID) REFERENCES patients(patientID),
+FOREIGN KEY (medicalHistoryID) REFERENCES medicalHistory(id),
+primary key(id));
+
+create table models(
+id int not null auto_increment,
+modelName varchar(255),
+accuracy varchar(255),
+primary key(id));
+
+insert into models(modelName, accuracy) values ("breastCancerModel", 0);
+insert into models(modelName, accuracy) values ("diabetesModel", 0);
+insert into models(modelName, accuracy) values ("heartDiseaseModel", 0);
+
+create table datasetUpdates(
+id int not null auto_increment,
+name varchar(255),
+updated int,
+primary key(id));
+
+insert into datasetUpdates(name, updated) values ("heartDisease", 0);
+insert into datasetUpdates(name, updated) values ("diabetes", 0);
+insert into datasetUpdates(name, updated) values ("breastCancer", 0);
