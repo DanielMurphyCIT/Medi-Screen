@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  top: 100px;
+  left: 690px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;	
+  font-size: 22px;
+
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+#HeartDiseaseFormWrapper{
+	background-color: #fff;
+	height: 1400px;
+	width: 30%;
+	position: relative;
+	left: 550px;
+	top: 130px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+
+#HeartDiseaseForm{
+	position: relative;
+	left: 140px;
+	top: 50px;
+}
+
+input{
+	border-radius: 2px;
+}
+
+button{
+	position: relative;
+	left: 60px;
+	border-radius: 5px;
+	
+}
+
+h2{
+	font-family: 'Varela Round', sans-serif;
+}
+
+#BreastCancerFormWrapper{
+	background-color: #fff;
+	position: relative;
+	top: -1270px;
+	width: 20%;
+	height: 760px;
+	left: 100px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+#BreastCancerForm{
+	position: relative;
+	left: 70px;
+	top: 50px;
+}
+
+#DiabetesFormWrapper{
+	background-color: #fff;
+	position: relative;
+	width: 20%;
+	height: 750px;
+	left: 1100px;
+	top: -2032px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+#DiabetesForm{
+	position: relative;
+	left: 70px;
+	top: 50px;
+}

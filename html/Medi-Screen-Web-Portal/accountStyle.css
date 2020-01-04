@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+#profile-pic{
+	height: 200px;
+	width: 200px;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+#form{
+	background-color: #fff;
+	top: 100px;
+	position: relative;
+	width: 50%;
+	left: 400px;
+	height: 100%;
+	border-radius: 4px;
+	border: 1px solid black;
+}
+#username{
+	font-family: 'Exo 2', sans-serif;
+	position: relative;
+	font-size: 3em;
+	left: 340px;
+	top: -200px;
+}
+
+#details{
+	font-size: 1.3em;
+	position: relative;
+	top: -100px;
+	left: 50px;
+	font-weight: bold;
+}
+
+#Patient-Form-Button{
+	box-shadow:inset 0px 0px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:19px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	position: relative;
+	left: 750px;
+	font-weight:bold;
+	padding:11px 18px;
+	text-decoration:none;
+	text-shadow:-1px 1px 6px #5b6178;
+	top: -250px;
+	
+}
+
+#upload{
+	position: relative;
+	left: 40px;
+}
+
+#info{
+	position: relative;
+	left: 700px;
+	top: -290px;
+	font-size: 1.3em;
+	
+}
