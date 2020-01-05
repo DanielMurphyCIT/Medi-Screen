@@ -21,15 +21,14 @@ def loadModel(name):
 	print("Loaded Model From Disk")
 	return loadedModel
 
-con = pymysql.connect('localhost', 'ubuntu', 'root', 'mediScreenDatabase')
-cur = con.cursor()
 running = True
 while running:
+	con = pymysql.connect('localhost', 'ubuntu', 'root', 'mediScreenDatabase')
+	cur = con.cursor()
 	cur.execute("select * from medicalHistory where(beenCalculated = 0);")
 	rows = cur.fetchall()
 	if len(rows) == 0:
 		print("Sleep...")
-		time.sleep(10)
 	else:
 		diabetesModel = loadModel("diabetesModel")
 		heartDiseaseModel = loadModel("heartDiseaseModel")
