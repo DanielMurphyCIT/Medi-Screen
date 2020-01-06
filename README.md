@@ -6,3 +6,6 @@ html - contains all Medi-Web-Screen files, can be used on a system running apach
 
 NEW LINK FOR THE APP  
 https://drive.google.com/file/d/1R-8P9fiIJr0YRT0u-q5Oo99z5z8qQMkb/view?usp=sharing  
+
+NEW LINK FOR THE POWERPOINT
+https://docs.google.com/presentation/d/1mrFoQ0newrFA6YqRo8NGn_jRXK1HJhFCftOuUoNgaP4/edit?usp=sharing
