@@ -37,6 +37,26 @@ session_start();
 			From here you can: <br>1) You can search for a specific client and generate a report<br>
 			2)You can see all of your clients<br>
 			3) You can see your account details<br></p>
+		<ul>
+                <h3>Accuracy of the Machine Learning Models</h3>
+                <?php
+                require_once('../db_connection.php');
+                $query = "Select * from models;";
+                $conn = openConnection();
+                $res = $conn->query($query);
+                if($res->num_rows < 1){
+                        echo "NO MODELS";
+                }
+                else{
+                        while($row = $res->fetch_assoc()){
+                                $name = $row["modelName"];
+                                $accuracy = $row["accuracy"];
+                                echo "<li><h4>$name: $accuracy</h4></li><br>";
+                        }
+                }
+                closeConnection($conn);
+                ?>
+                </ul>
 		</div>
 		
 	</body>

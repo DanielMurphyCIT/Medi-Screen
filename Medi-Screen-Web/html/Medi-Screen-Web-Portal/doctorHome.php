@@ -36,8 +36,27 @@ session_start();
 			Here you can: <br> 1) Search for a specific patient and their details<br>
 			2) You can see all of your patients <br> 3) You can see your account details <br>
 			4) You can use the admin tab to input more data to the datasets, and retrain the Medi-AI models<br> </p>
+		<ul>
+		<h3>Accuracy of the Machine Learning Models</h3>
+		<?php
+		require_once('../db_connection.php');
+		$query = "Select * from models;";
+		$conn = openConnection();
+		$res = $conn->query($query);
+		if($res->num_rows < 1){
+    			echo "NO MODELS";
+		}
+		else{
+    			while($row = $res->fetch_assoc()){
+        			$name = $row["modelName"];
+        			$accuracy = $row["accuracy"];
+        			echo "<li><h4>$name: $accuracy</h4></li><br>";
+    			}
+		}
+		closeConnection($conn);
+		?>
+		</ul>
 		</div>
-		
 	</body>
 
 
