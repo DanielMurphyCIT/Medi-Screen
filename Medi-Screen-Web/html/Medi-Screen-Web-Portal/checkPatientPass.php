@@ -10,8 +10,8 @@ if($res->num_rows < 1){
 else{
     $row = $res->fetch_assoc();
     $id = $row["patientID"];
-    $sql = "insert into passwords where(accountID = '$id' and password = '$password');";
-    if(mysqli_query($conn, $query)){
+    $sql = "insert into passwords(accountID, password) values('$id', '$password');";
+    if(mysqli_query($conn, $sql)){
         echo "PASS OK, $id";
     }
     else{

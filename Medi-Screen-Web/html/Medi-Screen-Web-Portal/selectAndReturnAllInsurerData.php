@@ -14,7 +14,7 @@ else{
     	$email = $row["email"];
     	$location = $row["companyName"];
     	$postCode = $row["postCode"];
-        echo "$id,$fName,$lName,$email,$phoneNum,$location,$postCode\n";
+        echo "$id,$fName,$lName,$email,$location,$postCode\n";
     }
 }
 closeConnection($conn);
